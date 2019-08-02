@@ -1,0 +1,29 @@
+digraph {
+    ratio=0.56
+
+    node [
+        shape=box
+        fontname="Helvetica Neue"
+    ]
+
+    edge [
+        dir="back"
+    ]
+
+    edge [
+        fontname="Helvetica Neue"
+        fontsize=10
+    ]
+
+    object, car [
+        style=filled
+        fillcolor="#001484"
+        color = "#aaaaff"
+        fontcolor=white
+    ]
+
+    car [label="Car"]
+    object -> car -> my_car
+    car -> green_car
+    car -> blue_car
+}

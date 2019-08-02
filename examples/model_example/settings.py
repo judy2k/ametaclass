@@ -1,0 +1,3 @@
+INSTALLED_APPS = ('model_example',)
+
+SECRET_KEY='BASTEPTEHH'

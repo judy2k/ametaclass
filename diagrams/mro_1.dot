@@ -1,0 +1,10 @@
+digraph {
+    ratio=0.56
+
+    node [
+        shape=box
+        fontname="Helvetica Neue"
+    ]
+
+    Horatio -> James -> Tom [dir="back"]
+}

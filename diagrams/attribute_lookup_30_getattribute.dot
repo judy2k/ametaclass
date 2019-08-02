@@ -1,0 +1,38 @@
+digraph {
+    ratio=0.56
+
+    node [
+        shape=box
+        fontname="Helvetica Neue"
+    ]
+
+    edge [
+        fontname="Helvetica Neue"
+        fontsize=10
+    ]
+
+    gattr, ga, cd, super [
+        style=filled
+        fillcolor="#001484"
+        color = "#aaaaff"
+        fontcolor=white
+        
+    ]
+
+    error [
+        label="Attribute Error"
+        style=filled
+        fillcolor=red
+        color="#dd000"
+    ]
+
+    ga [label="__getattribute__"]
+    iv [label="Instance Value"]
+    cd [label="Class Definition"]
+    super [label="Superclass"]
+    gattr [label="__getattr__"]
+
+    ga -> iv -> cd -> super -> gattr -> error;
+    super -> super
+    gattr -> gattr [label=" on superclasses"]
+}

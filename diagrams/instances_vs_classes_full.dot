@@ -1,0 +1,29 @@
+digraph {
+    ratio=0.56
+
+    node [
+        shape=box
+        fontname="Helvetica Neue"
+    ]
+
+    edge [
+        fontname="Helvetica Neue"
+        fontsize=10
+        dir=back
+    ]
+
+    object, Car[
+        style=filled
+        fillcolor="#001484"
+        color = "#aaaaff"
+        fontcolor=white
+    ]
+
+    type -> object [label="instance of"]
+    type -> Car [label="instance of", weight=0]
+    object -> Car [label=" inherits from"]
+    Car -> my_car [label=" instance of"]
+
+    {rank = same; Car; my_car}
+    {rank = same; type; object}
+}

@@ -1,0 +1,35 @@
+digraph {
+    ratio=0.56
+
+    node [
+        shape=box
+        fontname="Helvetica Neue"
+    ]
+
+    edge [
+        fontname="Helvetica Neue"
+        fontsize=10
+    ]
+
+    cd, super [
+        style=filled
+        fillcolor="#001484"
+        color = "#aaaaff"
+        fontcolor=white
+    ]
+
+    error [
+        label="Attribute Error"
+        style=filled
+        fillcolor=red
+        color="#dd000"
+    ]
+    iv [label="Instance Value"]
+    cd [label="Class Definition"]
+    super [label="Superclass"]
+
+    iv -> cd
+    cd -> super
+    super -> super
+    super -> error
+}
